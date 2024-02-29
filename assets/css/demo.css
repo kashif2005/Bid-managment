@@ -1,0 +1,514 @@
+@font-face {
+    font-family: "Sk Modernist";
+    src: url('../fonts/sk-modernist.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Sk Modernist";
+    src: url('../fonts/sk-modernist-bold.otf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url('../fonts/sk-modernist-bold.otf');
+    font-weight: 700;
+}
+
+:root {
+    --clr-theme: #198FD9;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+figure {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Sk Modernist";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    width: 100%;
+    height: 100vh;
+    padding: 2.5rem 4.375rem;
+    margin: auto;
+    gap: 3rem;
+    /* flex-wrap: wrap; */
+    z-index: 1;
+}
+
+.main-form {
+    width: 100%;
+    max-width: 30.375rem;
+    margin: 2rem 0;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 608px;
+}
+
+.main-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+}
+
+.main-h img {
+    width: 100%;
+    max-width: 182px;
+}
+
+.login-h h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 3.5rem 0 1rem;
+}
+
+.login-h p {
+    padding-top: 0px;
+    margin: 0;
+    color: #828282;
+}
+
+.form-account input {
+    outline: none;
+    width: 100%;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid var(--clr-theme);
+    border-bottom-width: 4px;
+}
+
+.form-account input::placeholder {
+    color: #111111;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.forget-btn {
+    margin-top: 9.375rem;
+}
+
+.form-account {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    gap: 2rem;
+}
+
+.form-account label {
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    font-weight: 500;
+    color: #111111;
+    font-size: 1rem;
+}
+
+.form-account button {
+    width: 100%;
+    padding: 1.25rem;
+    font-size: 1.25rem;
+    background-color: var(--clr-theme);
+    color: white;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.form-account button.return-btn {
+    color: #111111;
+    background-color: transparent;
+    margin-top: 0.5rem;
+}
+
+.form-account button.return-btn a {
+    text-decoration: none;
+    color: black;
+}
+
+.form-account button:hover {
+    background-color: #116193
+}
+
+.form-account button.return-btn a:hover {
+    /* color: #ffff;
+    background-color: black; */
+}
+
+.check-box {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 6px;
+}
+
+.form-account .check-box input[type="checkbox"] {
+    width: fit-content;
+}
+
+.check-box label {
+    margin: 0;
+}
+
+.check-box .forget {
+    margin-left: auto;
+}
+
+
+/*              --------------------- */
+
+@media screen and (max-width:1400.98px) {
+    .main-image img {
+        max-height: 600px;
+    }
+}
+
+@media screen and (max-width:1366.98px) {
+    html {
+        font-size: 15px;
+    }
+    .main-image img {
+        max-height: 580px;
+    }
+}
+
+@media screen and (max-width:1199.98px) {
+    html {
+        font-size: 14px;
+    }
+    .login-h h1 {
+        margin: 2rem 0 1rem;
+        font-size: 2.25rem;
+    }
+    .form-account {
+        margin-top: 2rem;
+    }
+    .forget-btn {
+        margin-top: 6.5rem;
+    }
+    .main-h img {
+        max-width: 160px;
+    }
+}
+
+
+/* media query */
+
+@media screen and (max-width:991.98px) {
+    html {
+        font-size: 13px;
+    }
+    .forget-btn {
+        margin-top: 5rem;
+    }
+    .main-h img {
+        max-width: 140px;
+    }
+    .main-container {
+        padding: 2.5rem;
+    }
+}
+
+@media screen and (max-width:767.98px) {
+    html {
+        font-size: 12px;
+    }
+    .main-image {
+        display: none;
+    }
+    .main-form {
+        /* max-width: 100%; */
+        margin: auto;
+    }
+    .forget-btn {
+        margin-top: 3rem;
+    }
+}
+
+
+/* reset password page */
+
+.reset-page {
+    width: 100vw;
+    height: 100vh;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(181, 181, 181, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.display-box {
+    display: none;
+}
+
+.box {
+    width: 674px;
+    height: 329px;
+    margin: auto;
+    border-radius: 12px;
+    background-color: #ffff;
+    padding: 10px 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo i {
+    font-size: 25px;
+}
+
+.logo img {
+    width: 178px;
+    height: 24px;
+}
+
+.logo-image {
+    margin-top: 40px;
+    text-align: center;
+    padding: 0px;
+}
+
+.logo-image img {
+    width: 200px;
+    height: 132px;
+}
+
+
+/* Organization-page */
+
+.Organization-page {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+
+.sidebar {
+    position: fixed;
+    /* padding: 2.5rem; */
+    height: 100vh;
+}
+
+.side-logo img {
+    width: 148px;
+    height: 39px;
+}
+
+@media (max-width:200px) {
+    .Morgan-image p {
+        display: none;
+    }
+    .Morgan-image {
+        background-color: transparent;
+    }
+    .list span {
+        display: none;
+        text-align: center;
+    }
+    .list {
+        display: flex;
+        justify-content: center;
+    }
+    .side-logo {
+        background-image: url(../img/1.png);
+        transition: 0.5s ease;
+    }
+}
+
+.side-logo {
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../img/BID\ MANAGEMENT..png);
+}
+
+.grey {
+    color: #828282;
+}
+
+.Morgan-image {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    background-color: #eeee;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.list ul {
+    padding: 0px;
+}
+
+.list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    gap: 10px;
+    padding: 15px 0px;
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* top bar */
+
+.top-bar {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: end;
+    /* align-items: center; */
+}
+
+.search-bar {
+    display: flex;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #F7F8FA;
+    border-radius: 10px;
+}
+
+.search-bar input {
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: #F7F8FA;
+}
+
+.search-bar input::placeholder {
+    color: #828282;
+    display: flex;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.search-bar img {
+    margin: auto;
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    background-color: #F7F8FA;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search-icon img {
+    width: 1.25rem;
+    height: 1.375rem;
+}
+
+
+/* left-bar */
+
+.left-bar {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.left-top-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.left-btn .two {
+    padding: 1.0rem;
+    font-size: 1.25rem;
+    font-size: 13px;
+    background-color: var(--clr-theme);
+    color: white;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.left-bar .one {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+
+.left-btn {
+    display: flex;
+}
+
+.orgi-logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
